@@ -149,6 +149,20 @@ export function FormApplicant() {
               placeholder="e.g. District Administration Office, Bardiya"
               {...form.getInputProps("applicant_citizenship_issuer")}
             />
+
+            <TextInput
+              label="National Identity Card No. (New)"
+              description="Applicant's NID Number"
+              placeholder="e.g. 154-641-566-8"
+              {...form.getInputProps("applicant_nid")}
+            />
+
+            <TextInput
+              label="Passport No. (New)"
+              description="Applicant's Passport Number"
+              placeholder="e.g. PA5234035"
+              {...form.getInputProps("applicant_passport")}
+            />
           </SimpleGrid>
 
           <Divider mt="sm" />
@@ -158,6 +172,40 @@ export function FormApplicant() {
           </Text>
 
           <Grid gutter="xs">
+            <Grid.Col span={2}>
+              <Select
+                label="Grandfather's Honorific (New)"
+                description="Mr/Late"
+                placeholder="e.g. Mr."
+                data={["Mr.", "Late"]}
+                {...form.getInputProps("applicant_grandfather_honorific")}
+              />
+            </Grid.Col>
+            <Grid.Col span={4}>
+              <TextInput
+                label="Grandfather's Name (New)"
+                description="Applicant's Grandfather's Name"
+                placeholder="e.g. John Doe"
+                {...form.getInputProps("applicant_grandfather_name")}
+              />
+            </Grid.Col>
+            <Grid.Col span={2}>
+              <Select
+                label="Grandmother's Honorific (New)"
+                description="Mrs/Late"
+                placeholder="e.g. Mrs."
+                data={["Mrs.", "Late"]}
+                {...form.getInputProps("applicant_grandmother_honorific")}
+              />
+            </Grid.Col>
+            <Grid.Col span={4}>
+              <TextInput
+                label="Grandmother's Name (New)"
+                description="Applicant's Grandmother's Name"
+                placeholder="e.g. John Doe"
+                {...form.getInputProps("applicant_grandmother_name")}
+              />
+            </Grid.Col>
             <Grid.Col span={2}>
               <Select
                 label="Father's Honorific"

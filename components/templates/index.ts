@@ -22,11 +22,13 @@ import { TemplateShahabhagiCertificate } from "./statement/shahabhagi/certificat
 import { TemplateShahabhagiStatement } from "./statement/shahabhagi/statement";
 import { TemplatePermanentAddress } from "./woda/address";
 import { TemplateDOBVerification } from "./woda/dob";
+import { TemplateDOBVerificationNew } from "./woda/dob-new";
 import { TemplateFiscalYear } from "./woda/fiscal";
 import { TemplateIncomeVerification } from "./woda/income";
 import { TemplateMigration } from "./woda/migration";
 import { TemplateOccupationVerification } from "./woda/occupation";
 import { TemplateRelationshipVerification } from "./woda/relationship";
+import { TemplateRelationshipVerificationNew } from "./woda/relationship-new";
 import { TemplateSurname } from "./woda/surname";
 import { TemplateTaxClearance } from "./woda/taxClearance";
 
@@ -53,8 +55,10 @@ import imgNarayanSt from "@/assets/img/template/statement/narayan_st.png";
 
 export const T = {
   relationship_verification: TemplateRelationshipVerification,
+  relationship_verification_new: TemplateRelationshipVerificationNew,
   occupation_verification: TemplateOccupationVerification,
   dob_verification: TemplateDOBVerification,
+  dob_verification_new: TemplateDOBVerificationNew,
   annual_income_verification: TemplateIncomeVerification,
   tax_clearance: TemplateTaxClearance,
   fiscal_year_details: TemplateFiscalYear,
@@ -98,6 +102,11 @@ export const configTemplateInfo: any[] = [
         img: imgRelationship.src,
       },
       {
+        value: "relationship_verification_new",
+        label: "Relationship Verification (New)",
+        img: imgRelationship.src,
+      },
+      {
         value: "occupation_verification",
         label: "Occupation Verification",
         img: imgOccupation.src,
@@ -105,6 +114,11 @@ export const configTemplateInfo: any[] = [
       {
         value: "dob_verification",
         label: "Date of Birth Verification",
+        img: imgDob.src,
+      },
+      {
+        value: "dob_verification_new",
+        label: "Date of Birth Verification (New)",
         img: imgDob.src,
       },
       {
