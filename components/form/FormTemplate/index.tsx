@@ -74,6 +74,11 @@ export function FormTemplate() {
             return item.value;
           }),
       });
+    } else {
+      form.setFieldValue("setinfo", {
+        ...form.values.setinfo,
+        allItems: setinfo?.items,
+      });
     }
   }, []);
 
