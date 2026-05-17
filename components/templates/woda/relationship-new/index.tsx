@@ -293,7 +293,11 @@ export function TemplateRelationshipVerificationNew() {
                       {form.values?.applicant_father_name}
                     </Text>
                   </td>
-                  <td></td>
+                  <td>
+                    <Text lh={lh}>
+                      {form.values?.applicant_father_citizenship}
+                    </Text>
+                  </td>
                   <td>
                     <Text lh={lh}>Applicant&#39;s Father</Text>
                   </td>
@@ -318,7 +322,11 @@ export function TemplateRelationshipVerificationNew() {
                       {form.values?.applicant_mother_name}
                     </Text>
                   </td>
-                  <td></td>
+                  <td>
+                    <Text lh={lh}>
+                      {form.values?.applicant_mother_citizenship}
+                    </Text>
+                  </td>
                   <td>
                     <Text lh={lh}>Applicant&#39;s Mother</Text>
                   </td>
@@ -357,7 +365,11 @@ export function TemplateRelationshipVerificationNew() {
                       {form.values?.relation_extra_name}
                     </Text>
                   </td>
-                  <td></td>
+                  <td>
+                    <Text lh={lh}>
+                      {form.values?.relation_extra_citizenship}
+                    </Text>
+                  </td>
                   <td>
                     <Text lh={lh}>{form.values?.relation_extra_relation}</Text>
                   </td>

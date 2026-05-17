@@ -180,7 +180,7 @@ Clause (E) 1."
                 </Text>
               </Group>
 
-              <SimpleGrid cols={3} spacing="xs">
+              <SimpleGrid cols={2} spacing="xs">
                 <TextInput
                   disabled={!form.values?.extra_relation}
                   label="Extra Person - Honorific"
@@ -201,12 +201,19 @@ Clause (E) 1."
                 <TextInput
                   disabled={!form.values?.extra_relation}
                   label="Extra Person - Relation"
-                  description="e.g. e.g. Applicant's Brother"
+                  description="e.g. Applicant's Brother"
                   placeholder="e.g. Applicant's Brother"
                   withAsterisk
                   style={{ flex: 1 }}
                   key={form.key(`fiscal_1_ad`)}
                   {...form.getInputProps(`relation_extra_relation`)}
+                />
+                <TextInput
+                  disabled={!form.values?.extra_relation}
+                  label="Extra Person - Citizenship No."
+                  description="Citizenship Certificate Number"
+                  placeholder="e.g. xx-xx-xx-xxxx"
+                  {...form.getInputProps("relation_extra_citizenship")}
                 />
               </SimpleGrid>
             </Stack>

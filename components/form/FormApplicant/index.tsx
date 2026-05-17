@@ -224,6 +224,14 @@ export function FormApplicant() {
                 {...form.getInputProps("applicant_father_name")}
               />
             </Grid.Col>
+            <Grid.Col span={6}>
+              <TextInput
+                label="Father's Citizenship No."
+                description="Father's Citizenship Certificate Number"
+                placeholder="e.g. xx-xx-xx-xxxx"
+                {...form.getInputProps("applicant_father_citizenship")}
+              />
+            </Grid.Col>
             <Grid.Col span={2}>
               <Select
                 label="Mother's Honorific"
@@ -240,6 +248,14 @@ export function FormApplicant() {
                 placeholder="e.g. John Doe"
                 leftSectionWidth={200}
                 {...form.getInputProps("applicant_mother_name")}
+              />
+            </Grid.Col>
+            <Grid.Col span={6}>
+              <TextInput
+                label="Mother's Citizenship No."
+                description="Mother's Citizenship Certificate Number"
+                placeholder="e.g. xx-xx-xx-xxxx"
+                {...form.getInputProps("applicant_mother_citizenship")}
               />
             </Grid.Col>
           </Grid>
