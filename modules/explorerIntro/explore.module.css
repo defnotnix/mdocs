@@ -1,0 +1,10 @@
+.foldercard {
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .foldercard:hover {
+    //transform: translateY(-4px);
+    border-color: var(--mantine-color-brand-3);
+  }
+  

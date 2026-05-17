@@ -1,0 +1,9 @@
+.root {
+  background: #15224c;
+  color: var(--mantine-color-gray-0);
+}
+
+.headerlogo {
+  background: #15224c;
+  border-right: 1px solid var(--mantine-color-gray-light);
+}

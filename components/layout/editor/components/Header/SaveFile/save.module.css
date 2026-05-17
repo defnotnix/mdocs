@@ -1,0 +1,20 @@
+.foldercard {
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .foldercard:hover {
+    //transform: translateY(-4px);
+    border-color: var(--mantine-color-brand-3);
+  }
+  
+  .doccard {
+    cursor: pointer;
+    border-bottom: 1px solid var(--mantine-color-gray-3);
+    transition: 0.1s ease-in-out;
+  }
+  
+  .doccard:hover {
+    background: var(--mantine-color-gray-2);
+  }
+  

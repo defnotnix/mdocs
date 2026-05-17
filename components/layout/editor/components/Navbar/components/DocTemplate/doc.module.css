@@ -1,0 +1,21 @@
+.navitem {
+  transition: 0.1s ease-in-out;
+}
+
+.navitem:hover {
+  background: var(--mantine-color-gray-2);
+}
+
+.pagecard {
+  border-bottom: 1px solid var(--mantine-color-gray-2);
+  cursor: pointer;
+  border-left: 3px solid #00000000;
+}
+
+.pagecard:nth-child(1) {
+  border-top: 1px solid var(--mantine-color-gray-2);
+}
+
+.pagecard:hover {
+  background: var(--mantine-color-gray-0);
+}

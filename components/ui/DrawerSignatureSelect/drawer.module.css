@@ -1,0 +1,6 @@
+.card {
+  &:hover {
+    cursor: pointer;
+    background: var(--mantine-color-gray-0);
+  }
+}

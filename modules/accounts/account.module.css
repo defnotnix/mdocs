@@ -1,0 +1,4 @@
+.usercard:hover {
+  background: var(--mantine-color-gray-0);
+  cursor: pointer;
+}
