@@ -285,7 +285,9 @@ export function TemplateDOBVerificationNew() {
           </div>
         </SimpleGrid>
 
-        <Text style={{
+        <Text
+          mt="1in"
+        style={{
           textAlign: "justify",
         }}
           {...propsText}
