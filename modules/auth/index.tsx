@@ -203,6 +203,7 @@ export function ModuleLogin() {
 
                   <Group justify="flex-end">
                     <Button
+                      type="button"
                       loading={form.values.fLoading}
                       color={mutation.isSuccess ? "teal" : "brand"}
                       size="md"
