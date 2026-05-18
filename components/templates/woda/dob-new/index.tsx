@@ -285,11 +285,12 @@ export function TemplateDOBVerificationNew() {
           </div>
         </SimpleGrid>
 
-        <Text mt="md"    {...propsTitle}
-          ta="center"
-          tt="uppercase"
-          td="underline"
-          fw={600}>
+        <Text style={{
+          textAlign: "justify",
+        }}
+          {...propsText}
+          lh=".27in"
+          size="15.4px">
           This letter is hereby issued in accordance with the Section 12 of the Local Government Operation Act, 2074 B.S. (2017 A.D.).
         </Text>
       </Paper>
