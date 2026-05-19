@@ -118,6 +118,8 @@ export function ModuleEditorTemplate() {
             {
               template: JSON.stringify({
                 ...state,
+                details: form.values,
+                docinfo: undefined,
               }),
               type: "statement",
             },
@@ -159,7 +161,7 @@ export function ModuleEditorTemplate() {
   }
 
   if (state?.active?.startsWith("docall-")) {
-    const DocComponentAll = form.values?.setinfo?.items.map(
+    const DocComponentAll = form.values?.setinfo?.items?.map(
       (docitem: any, index: number) => {
         const DocComp = getComponentByType(docitem || "");
 
