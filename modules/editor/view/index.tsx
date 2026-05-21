@@ -18,6 +18,7 @@ import { ModuleEditorFormWoda } from "../form/woda";
 import { ModuleEditorTemplate } from "../template";
 import { ModuleEditorFormStatement } from "../form/statement";
 import { apiFile } from "@/api/file";
+import { configTemplateInfo } from "@/components/templates";
 //api
 
 export function ModuleEditorView() {
@@ -59,8 +60,29 @@ export function ModuleEditorView() {
       payload: template,
     });
 
+    // Derive which config set was active using saved setinfo or the active field
+    const configMatch =
+      configTemplateInfo.find(
+        (c: any) =>
+          c.value === template?.details?.setinfo?.value ||
+          template?.active?.startsWith("docall-" + c.value) ||
+          template?.active?.startsWith(c.value)
+      ) ||
+      (Params.type === "woda" ? configTemplateInfo[0] : configTemplateInfo[1]);
+
+    const restoredSetinfo = template?.details?.setinfo
+      ? { ...template.details.setinfo, allItems: configMatch?.items }
+      : {
+          ...configMatch,
+          allItems: configMatch?.items,
+          items: configMatch?.items
+            ?.filter((item: any) => !item.disablePreSelect)
+            .map((item: any) => item.value),
+        };
+
     form.setValues({
       ...template?.details,
+      setinfo: restoredSetinfo,
       applicant_dob: template?.details?.applicant_dob
         ? new Date(template?.details?.applicant_dob)
         : undefined,
@@ -70,7 +92,7 @@ export function ModuleEditorView() {
       statement_end_date: template?.details?.statement_end_date
         ? new Date(template?.details?.statement_end_date)
         : undefined,
-      statements: template?.details?.statements.map((item: any) => {
+      statements: template?.details?.statements?.map((item: any) => {
         return {
           ...item,
           date: new Date(item.date),

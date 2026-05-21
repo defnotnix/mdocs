@@ -425,7 +425,7 @@ export function TemplateBirendranagarStatement() {
               {index == 0 && <RenderTableStart />}
               <RenderTable data={stChunk} />
 
-              {index == chunkedStatements.length - 1 && stChunk.length < 32 && (
+              {index == chunkedStatements.length - 1 && stChunk.length < 24 && (
                 <TableSummary />
               )}
             </table>
@@ -434,7 +434,7 @@ export function TemplateBirendranagarStatement() {
           </Paper>
         ))}
 
-        {chunkedStatements[chunkedStatements.length - 1]?.length >= 32 && (
+        {chunkedStatements[chunkedStatements.length - 1]?.length >= 24 && (
           <Paper
             pos="relative"
             className={classesTemplate.root}
