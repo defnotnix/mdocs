@@ -298,7 +298,7 @@ export function TemplateKarnaliStatement() {
           w="100%"
           ta="center"
           style={{
-            bottom: "1in",
+            bottom: "1.2in",
             right: "0",
           }}
         >
